@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body {
+    margin:0;
+    background:
+      radial-gradient(1100px 660px at 10% -8%, #d7e7fb 0%, rgba(215,231,251,0) 55%),
+      radial-gradient(950px 620px at 102% -4%, #fcf2e0 0%, rgba(252,242,224,0) 52%),
+      linear-gradient(180deg, #f4f1ea 0%, #f7f4ee 60%, #f4f0e8 100%);
+    background-attachment: fixed;
+  }
+  ::selection { background:#bfe1f5; color:#12608f; }
+  @keyframes pulseDot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.35;transform:scale(.8)} }
+</style>
+</helmet>
+<main ref="{{ setRoot }}" style="--ink:#1b1a17; --muted:#6c675e; --line:#e6dfd2; --card:#ffffff; --accent:#1e6fa8; --yellow:#f8ce4b; --hl:#c4e2f5; font-family:'Geist','Geist Fallback',system-ui,sans-serif; color:var(--ink); min-height:100vh; overflow-x:hidden; -webkit-font-smoothing:antialiased; position:relative;">
+
+  <div style="position:sticky; top:16px; z-index:60; padding:0 20px;">
+    <nav style="max-width:960px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:11px 12px 11px 16px; background:rgba(255,255,255,0.82); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border:1px solid rgba(255,255,255,0.9); border-radius:20px; box-shadow:0 10px 34px rgba(40,50,70,0.10);">
+      <a href="#top" style="display:flex; align-items:center; gap:11px; text-decoration:none; color:var(--ink);">
+        <span style="width:38px;height:38px;border-radius:11px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;letter-spacing:.02em;">TA</span>
+        <span style="font-weight:600;font-size:15px;display:none;" style-hover="">Talhah Ally</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:4px;">
+        <a href="#about" style="padding:9px 14px;border-radius:11px;text-decoration:none;color:#4f4a42;font-size:14.5px;font-weight:500;transition:background .25s ease,color .25s ease;" style-hover="background:rgba(30,111,168,0.09);color:var(--ink);">À propos</a>
+        <a href="#skills" style="padding:9px 14px;border-radius:11px;text-decoration:none;color:#4f4a42;font-size:14.5px;font-weight:500;transition:background .25s ease,color .25s ease;" style-hover="background:rgba(30,111,168,0.09);color:var(--ink);">Compétences</a>
+        <a href="#experiences" style="padding:9px 14px;border-radius:11px;text-decoration:none;color:#4f4a42;font-size:14.5px;font-weight:500;transition:background .25s ease,color .25s ease;" style-hover="background:rgba(30,111,168,0.09);color:var(--ink);">Parcours</a>
+      </div>
+      <a href="https://www.linkedin.com/in/talhah-ally-75b0b1175/" target="_blank" rel="noopener" style="padding:11px 18px;border-radius:13px;background:var(--yellow);color:#1b1a17;font-size:14.5px;font-weight:700;text-decoration:none;box-shadow:0 6px 16px rgba(248,206,75,0.5);transition:transform .25s ease,box-shadow .25s ease;" style-hover="transform:translateY(-2px);box-shadow:0 10px 22px rgba(248,206,75,0.6);">Me contacter</a>
+    </nav>
+  </div>
+
+  <section id="top" style="max-width:1120px; margin:0 auto; padding:76px 24px 40px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:30px;">
+    <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1); display:inline-flex; align-items:center; gap:14px; flex-wrap:wrap; justify-content:center;">
+      <span style="display:inline-flex;align-items:center;gap:9px;padding:8px 15px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:13.5px;font-weight:500;color:#3f3a33;box-shadow:0 4px 14px rgba(40,50,70,0.06);">
+        <span style="width:8px;height:8px;border-radius:50%;background:#2f9e57;box-shadow:0 0 10px #2f9e57;animation:pulseDot 2.4s ease-in-out infinite;"></span>
+        En recherche d'une mission
+      </span>
+      <span style="font-size:13.5px;color:var(--muted);">Project Manager · Dev SaaS &amp; applications</span>
+    </div>
+
+    <h1 data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .75s cubic-bezier(.22,.61,.36,1) .06s,transform .75s cubic-bezier(.22,.61,.36,1) .06s; font-weight:800; font-size:clamp(34px,5.4vw,60px); line-height:1.05; letter-spacing:-0.03em; margin:0; max-width:24ch;">
+      Je construis des produits web, du cadrage <span style="color:#1e6fa8;">jusqu'à la mise en prod.</span>
+    </h1>
+
+    <p data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .75s cubic-bezier(.22,.61,.36,1) .12s,transform .75s cubic-bezier(.22,.61,.36,1) .12s; font-size:clamp(17px,1.7vw,20px); line-height:1.55; color:var(--muted); max-width:52ch; margin:0;">Project manager et développeur. Je passe de la roadmap au code sans changer de casquette, puis je regarde ce que racontent les chiffres pour ajuster.</p>
+
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .75s cubic-bezier(.22,.61,.36,1) .18s,transform .75s cubic-bezier(.22,.61,.36,1) .18s; display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+      <span style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:14.5px;font-weight:600;color:#33302a;box-shadow:0 4px 14px rgba(40,50,70,0.05);"><span style="color:var(--accent);">✓</span> Product management</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:14.5px;font-weight:600;color:#33302a;box-shadow:0 4px 14px rgba(40,50,70,0.05);"><span style="color:var(--accent);">✓</span> Dev full-stack</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:14.5px;font-weight:600;color:#33302a;box-shadow:0 4px 14px rgba(40,50,70,0.05);"><span style="color:var(--accent);">✓</span> Web analytics</span>
+    </div>
+
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .75s cubic-bezier(.22,.61,.36,1) .24s,transform .75s cubic-bezier(.22,.61,.36,1) .24s; display:flex; flex-direction:column; align-items:center; gap:12px; margin-top:6px;">
+      <a href="#contact" style="display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:16px;background:var(--yellow);color:#1b1a17;font-size:16.5px;font-weight:700;text-decoration:none;box-shadow:0 12px 30px rgba(248,206,75,0.55);transition:transform .28s ease,box-shadow .28s ease;" style-hover="transform:translateY(-3px);box-shadow:0 18px 38px rgba(248,206,75,0.65);">Réserver un échange</a>
+      <span style="font-size:13.5px;color:var(--muted);">Sans engagement · réponse sous 24h</span>
+    </div>
+  </section>
+
+  <section id="about" style="max-width:1120px; margin:0 auto; padding:80px 24px;">
+    <div style="display:flex; flex-wrap:wrap; gap:60px; align-items:center;">
+      <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1); flex:0 1 380px; position:relative;">
+        <div style="position:absolute; inset:18px -14px -16px 16px; background:linear-gradient(150deg,#d7e7fb,#fbf1de); border-radius:26px; transform:rotate(-2deg);"></div>
+        <div style="position:relative; background:#fff; padding:14px 14px 16px; border-radius:22px; box-shadow:0 24px 60px rgba(40,50,70,0.16); transform:rotate(1.4deg);">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" hint-size="100%,430px" style="display:block;">
+            <image-slot id="hero-photo" fit="cover" placeholder="Glisse ton portrait" style="width:100%; aspect-ratio:4/5; display:block; border-radius:14px;"></image-slot>
+          </x-import>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 6px 4px;">
+            <span style="font-weight:700;font-size:15px;">Talhah Ally</span>
+            <span style="font-size:13px;color:var(--muted);">Île-de-France</span>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.22,.61,.36,1) .1s,transform .8s cubic-bezier(.22,.61,.36,1) .1s; flex:1 1 420px; display:flex; flex-direction:column; gap:22px;">
+        <span style="font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;">Qui suis-je</span>
+        <h2 style="font-weight:800;font-size:clamp(30px,3.6vw,44px);letter-spacing:-0.025em;line-height:1.06;margin:0;">Un builder opérateur, entre produit et code.</h2>
+        <p style="margin:0;font-size:17px;line-height:1.66;color:#544f47;">Je sais cadrer un besoin produit, le construire moi même, puis suivre ce que disent les chiffres pour ajuster. Le développement, la gestion de projet et l'analyse web, je les ai appris sur des projets réels, pas seulement dans les cours.</p>
+        <p style="margin:0;font-size:17px;line-height:1.66;color:#6c675e;">J'ai grandi à La Réunion et je travaille aujourd'hui depuis l'Île-de-France, sur des missions où il faut à la fois décider et livrer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" style="max-width:1120px; margin:0 auto; padding:70px 24px;">
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1); display:flex;align-items:baseline;gap:14px;margin-bottom:44px;">
+      <span style="font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;">Compétences</span>
+      <div style="flex:1;height:1px;background:var(--line);"></div>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:18px;">
+
+      <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1); display:flex;">
+        <div style="flex:1; padding:28px; background:var(--card); border:1px solid var(--line); border-radius:20px; box-shadow:0 8px 26px rgba(40,50,70,0.05); transition:transform .38s cubic-bezier(.22,.61,.36,1),box-shadow .38s ease,border-color .38s ease;" style-hover="transform:translateY(-5px);box-shadow:0 20px 44px rgba(40,50,70,0.12);border-color:#d7cfbf;">
+          <h3 style="margin:0 0 16px;font-weight:700;font-size:17px;">Programmation &amp; Tech</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">HTML / CSS</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">WordPress</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">PrestaShop</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Shopify (Liquid)</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Git / GitHub</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Stripe</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Déploiement cloud (Vercel)</span>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,.61,.36,1) .05s,transform .7s cubic-bezier(.22,.61,.36,1) .05s; display:flex;">
+        <div style="flex:1; padding:28px; background:var(--card); border:1px solid var(--line); border-radius:20px; box-shadow:0 8px 26px rgba(40,50,70,0.05); transition:transform .38s cubic-bezier(.22,.61,.36,1),box-shadow .38s ease,border-color .38s ease;" style-hover="transform:translateY(-5px);box-shadow:0 20px 44px rgba(40,50,70,0.12);border-color:#d7cfbf;">
+          <h3 style="margin:0 0 16px;font-weight:700;font-size:17px;">Product &amp; Web Analytics</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">GA4</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Suivi de KPI</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Reporting automatisé</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Datavisualisation</span>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,.61,.36,1) .1s,transform .7s cubic-bezier(.22,.61,.36,1) .1s; display:flex;">
+        <div style="flex:1; padding:28px; background:var(--card); border:1px solid var(--line); border-radius:20px; box-shadow:0 8px 26px rgba(40,50,70,0.05); transition:transform .38s cubic-bezier(.22,.61,.36,1),box-shadow .38s ease,border-color .38s ease;" style-hover="transform:translateY(-5px);box-shadow:0 20px 44px rgba(40,50,70,0.12);border-color:#d7cfbf;">
+          <h3 style="margin:0 0 16px;font-weight:700;font-size:17px;">Product Management</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Roadmap produit</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">User stories</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Priorisation des features</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Tests fonctionnels</span>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1); display:flex;">
+        <div style="flex:1; padding:28px; background:var(--card); border:1px solid var(--line); border-radius:20px; box-shadow:0 8px 26px rgba(40,50,70,0.05); transition:transform .38s cubic-bezier(.22,.61,.36,1),box-shadow .38s ease,border-color .38s ease;" style-hover="transform:translateY(-5px);box-shadow:0 20px 44px rgba(40,50,70,0.12);border-color:#d7cfbf;">
+          <h3 style="margin:0 0 16px;font-weight:700;font-size:17px;">Gestion de projet</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Agile / Scrum</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Jira</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Trello</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Notion</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Animation de réunions</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Suivi planning</span>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,.61,.36,1) .05s,transform .7s cubic-bezier(.22,.61,.36,1) .05s; display:flex;">
+        <div style="flex:1; padding:28px; background:var(--card); border:1px solid var(--line); border-radius:20px; box-shadow:0 8px 26px rgba(40,50,70,0.05); transition:transform .38s cubic-bezier(.22,.61,.36,1),box-shadow .38s ease,border-color .38s ease;" style-hover="transform:translateY(-5px);box-shadow:0 20px 44px rgba(40,50,70,0.12);border-color:#d7cfbf;">
+          <h3 style="margin:0 0 16px;font-weight:700;font-size:17px;">Automatisation</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Make</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Zapier</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Pipedream</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Airtable</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">OpenAI API</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Meta Graph API</span>
+            <span style="font-size:13px;padding:6px 12px;border-radius:999px;background:#f6f2ea;border:1px solid var(--line);color:#4f4a42;">Bots personnalisés</span>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,.61,.36,1) .1s,transform .7s cubic-bezier(.22,.61,.36,1) .1s; display:flex;">
+        <div style="flex:1; padding:28px; background:linear-gradient(155deg,#fff7db,#fdeeb6); border:1px solid #f2d97a; border-radius:20px; box-shadow:0 8px 26px rgba(210,170,40,0.14); transition:transform .38s cubic-bezier(.22,.61,.36,1),box-shadow .38s ease;" style-hover="transform:translateY(-5px);box-shadow:0 20px 44px rgba(210,170,40,0.22);">
+          <h3 style="margin:0 0 16px;font-weight:700;font-size:17px;">Certifications</h3>
+          <div style="display:flex;flex-direction:column;gap:11px;">
+            <span style="font-size:15px;color:#5c4d22;font-weight:500;">Google Analytics avancé</span>
+            <span style="font-size:15px;color:#5c4d22;font-weight:500;">Ateliers Numériques</span>
+            <span style="font-size:15px;color:#5c4d22;font-weight:500;">Inbound Marketing</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="experiences" style="max-width:1120px; margin:0 auto; padding:70px 24px;">
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1); display:flex;align-items:baseline;gap:14px;margin-bottom:48px;">
+      <span style="font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;">Expériences</span>
+      <div style="flex:1;height:1px;background:var(--line);"></div>
+    </div>
+
+    <div style="position:relative; padding-left:6px;">
+      <div style="position:absolute; left:13px; top:8px; bottom:24px; width:2px; background:var(--line);"></div>
+
+      <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.22,.61,.36,1),transform .75s cubic-bezier(.22,.61,.36,1); position:relative; padding-left:52px; padding-bottom:34px;">
+        <span style="position:absolute; left:6px; top:8px; width:16px;height:16px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 5px #f7f4ee,0 4px 12px rgba(248,206,75,0.6);"></span>
+        <div style="padding:28px 30px; border:1px solid #f2d97a; border-radius:20px; background:linear-gradient(155deg,#fff8dd,#fdefba); box-shadow:0 10px 30px rgba(210,170,40,0.14); transition:transform .38s cubic-bezier(.22,.61,.36,1),box-shadow .38s ease;" style-hover="transform:translateY(-5px);box-shadow:0 20px 44px rgba(210,170,40,0.22);">
+          <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between;margin-bottom:8px;">
+            <h3 style="margin:0;font-weight:800;font-size:23px;letter-spacing:-0.02em;">Savvly</h3>
+            <span style="font-size:13px;color:#8a6d1a;font-weight:600;">2024 · 2025</span>
+          </div>
+          <p style="margin:0 0 14px;font-size:15px;color:#6d5a20;font-weight:500;">Projet entrepreneurial full-stack, réalisé en autonomie</p>
+          <p style="margin:0;font-size:15px;line-height:1.68;color:#4f4a42;">SaaS pensé pour les freelances et les solopreneurs francophones. J'ai conçu et développé la plateforme de bout en bout : front sur Shopify (Liquid, JS), backend Node.js / Express déployé sur Vercel, base de données Supabase / PostgreSQL. Stripe intégré en production, avec le checkout, les abonnements, les webhooks et la gestion du cycle de vie des abonnements. L'onboarding et les pages sont animés avec Framer Motion, un blog SEO de 20 articles alimente l'acquisition, et un système de coaching 1:1 se débloque pour certains abonnés. Architecture scalable, sécurisée, orientée produit.</p>
+        </div>
+      </div>
+
+      <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.22,.61,.36,1),transform .75s cubic-bezier(.22,.61,.36,1); position:relative; padding-left:52px; padding-bottom:34px;">
+        <span style="position:absolute; left:8px; top:8px; width:13px;height:13px;border-radius:50%;background:#fff;border:2px solid var(--accent);box-shadow:0 0 0 5px #f7f4ee;"></span>
+        <div style="padding:28px 30px; border:1px solid var(--line); border-radius:20px; background:var(--card); box-shadow:0 8px 26px rgba(40,50,70,0.05); transition:transform .38s cubic-bezier(.22,.61,.36,1),box-shadow .38s ease,border-color .38s ease;" style-hover="transform:translateY(-5px);box-shadow:0 20px 44px rgba(40,50,70,0.12);border-color:#d7cfbf;">
+          <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between;margin-bottom:8px;">
+            <h3 style="margin:0;font-weight:800;font-size:22px;letter-spacing:-0.02em;">Chef de projet web, Web analyst</h3>
+            <span style="font-size:13px;color:var(--accent);font-weight:600;">2021 · 2023</span>
+          </div>
+          <p style="margin:0 0 14px;font-size:15px;color:#6c675e;font-weight:500;">Groupe La Poste, Branche Services Courrier Colis · Contrat d'apprentissage, 2 ans</p>
+          <p style="margin:0;font-size:15px;line-height:1.68;color:#544f47;">Webmastering, analyse et reporting sur AT Internet, coordination et suivi des projets. J'ai géré les plans de taggage et les CMS, repéré et remonté les anomalies dans Jira, industrialisé les reportings, animé les comités et produit la datavisualisation.</p>
+        </div>
+      </div>
+
+      <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.22,.61,.36,1),transform .75s cubic-bezier(.22,.61,.36,1); position:relative; padding-left:52px; padding-bottom:34px;">
+        <span style="position:absolute; left:8px; top:8px; width:13px;height:13px;border-radius:50%;background:#fff;border:2px solid var(--accent);box-shadow:0 0 0 5px #f7f4ee;"></span>
+        <div style="padding:28px 30px; border:1px solid var(--line); border-radius:20px; background:var(--card); box-shadow:0 8px 26px rgba(40,50,70,0.05); transition:transform .38s cubic-bezier(.22,.61,.36,1),box-shadow .38s ease,border-color .38s ease;" style-hover="transform:translateY(-5px);box-shadow:0 20px 44px rgba(40,50,70,0.12);border-color:#d7cfbf;">
+          <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between;margin-bottom:8px;">
+            <h3 style="margin:0;font-weight:800;font-size:22px;letter-spacing:-0.02em;">Chef de projet web</h3>
+            <span style="font-size:13px;color:var(--accent);font-weight:600;">2021</span>
+          </div>
+          <p style="margin:0 0 14px;font-size:15px;color:#6c675e;font-weight:500;">Musée Maillol, Galerie Dina Vierny, Pal Project · Contrat d'apprentissage, 9 mois</p>
+          <p style="margin:0;font-size:15px;line-height:1.68;color:#544f47;">Rédaction des cahiers des charges, suivi et validation des projets graphiques, suivi et validation des phases de développement.</p>
+        </div>
+      </div>
+
+      <div data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.22,.61,.36,1),transform .75s cubic-bezier(.22,.61,.36,1); position:relative; padding-left:52px;">
+        <span style="position:absolute; left:8px; top:8px; width:13px;height:13px;border-radius:50%;background:#fff;border:2px solid var(--accent);box-shadow:0 0 0 5px #f7f4ee;"></span>
+        <div style="padding:28px 30px; border:1px solid var(--line); border-radius:20px; background:var(--card); box-shadow:0 8px 26px rgba(40,50,70,0.05); transition:transform .38s cubic-bezier(.22,.61,.36,1),box-shadow .38s ease,border-color .38s ease;" style-hover="transform:translateY(-5px);box-shadow:0 20px 44px rgba(40,50,70,0.12);border-color:#d7cfbf;">
+          <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between;margin-bottom:8px;">
+            <h3 style="margin:0;font-weight:800;font-size:22px;letter-spacing:-0.02em;">Assistant chef de projet web</h3>
+            <span style="font-size:13px;color:var(--accent);font-weight:600;">2020</span>
+          </div>
+          <p style="margin:0 0 14px;font-size:15px;color:#6c675e;font-weight:500;">Groupe Ravate, leader de la distribution dans l'océan Indien · CDD, 4 mois</p>
+          <p style="margin:0;font-size:15px;line-height:1.68;color:#544f47;">Accompagnement sur la définition des objectifs, analyse des métriques via Google Web Analytics, reporting.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="formations" style="max-width:1120px; margin:0 auto; padding:70px 24px 90px;">
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1); display:flex;align-items:baseline;gap:14px;margin-bottom:44px;">
+      <span style="font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;">Formations</span>
+      <div style="flex:1;height:1px;background:var(--line);"></div>
+    </div>
+
+    <div style="display:flex; flex-wrap:wrap; gap:56px; align-items:flex-start;">
+      <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.22,.61,.36,1),transform .75s cubic-bezier(.22,.61,.36,1); flex:1 1 320px; position:sticky; top:96px; display:flex; flex-direction:column; gap:18px;">
+        <span style="font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;">Comment j'en suis arrivé là</span>
+        <p style="margin:0;font-size:17px;line-height:1.68;color:#3f3a33;">J'ai grandi à La Réunion. Après le bac, je suis parti à Bruxelles pour des études d'ostéopathie, en sciences de la motricité à l'ULB. J'y suis resté deux ans, le temps de comprendre que ce métier n'était pas le mien.</p>
+        <p style="margin:0;font-size:17px;line-height:1.68;color:#6c675e;">Alors j'ai changé de cap. Retour vers le web et le marketing, cette fois à Paris, avec un bachelor puis un MBA à My Digital School. En parallèle je bossais des deux côtés de la carte, dans l'océan Indien avec le groupe Ravate et sur des projets parisiens comme le Musée Maillol ou La Poste.</p>
+        <p style="margin:0;font-size:17px;line-height:1.68;color:#6c675e;">À force, j'ai arrêté de séparer le fait de piloter et celui de construire. J'ai appris à coder pour de bon, et j'ai fini par monter mon propre SaaS, Savvly, tout seul, de la première ligne jusqu'à la mise en prod.</p>
+      </div>
+
+      <div style="flex:1 1 440px; display:flex; flex-direction:column; gap:14px;">
+
+        <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1);">
+          <div style="background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px 26px; display:flex; flex-direction:column; gap:6px; box-shadow:0 8px 24px rgba(40,50,70,0.05); transition:transform .38s cubic-bezier(.22,.61,.36,1),box-shadow .38s ease,border-color .38s ease;" style-hover="transform:translateY(-4px);box-shadow:0 18px 40px rgba(40,50,70,0.12);border-color:#d7cfbf;">
+            <span style="font-size:13px;color:var(--accent);font-weight:600;">2021 · 2023</span>
+            <h3 style="margin:0;font-weight:700;font-size:20px;letter-spacing:-0.01em;">MBA Expert Marketing Digital</h3>
+            <p style="margin:0;font-size:15px;color:#6c675e;">My Digital School Paris</p>
+          </div>
+        </div>
+
+        <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,.61,.36,1) .04s,transform .7s cubic-bezier(.22,.61,.36,1) .04s;">
+          <div style="background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px 26px; display:flex; flex-direction:column; gap:6px; box-shadow:0 8px 24px rgba(40,50,70,0.05); transition:transform .38s cubic-bezier(.22,.61,.36,1),box-shadow .38s ease,border-color .38s ease;" style-hover="transform:translateY(-4px);box-shadow:0 18px 40px rgba(40,50,70,0.12);border-color:#d7cfbf;">
+            <span style="font-size:13px;color:var(--accent);font-weight:600;">2018 · 2021</span>
+            <h3 style="margin:0;font-weight:700;font-size:20px;letter-spacing:-0.01em;">Bachelor Web-marketing, E-business &amp; Social Media</h3>
+            <p style="margin:0;font-size:15px;color:#6c675e;">My Digital School Paris</p>
+          </div>
+        </div>
+
+        <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,.61,.36,1) .08s,transform .7s cubic-bezier(.22,.61,.36,1) .08s;">
+          <div style="background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px 26px; display:flex; flex-direction:column; gap:6px; box-shadow:0 8px 24px rgba(40,50,70,0.05); transition:transform .38s cubic-bezier(.22,.61,.36,1),box-shadow .38s ease,border-color .38s ease;" style-hover="transform:translateY(-4px);box-shadow:0 18px 40px rgba(40,50,70,0.12);border-color:#d7cfbf;">
+            <span style="font-size:13px;color:var(--accent);font-weight:600;">2016 · 2018</span>
+            <h3 style="margin:0;font-weight:700;font-size:20px;letter-spacing:-0.01em;">Bachelor Sciences de la motricité, module ostéopathe</h3>
+            <p style="margin:0;font-size:15px;color:#6c675e;">Université Libre de Bruxelles</p>
+          </div>
+        </div>
+
+        <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,.61,.36,1) .12s,transform .7s cubic-bezier(.22,.61,.36,1) .12s;">
+          <div style="background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px 26px; display:flex; flex-direction:column; gap:6px; box-shadow:0 8px 24px rgba(40,50,70,0.05); transition:transform .38s cubic-bezier(.22,.61,.36,1),box-shadow .38s ease,border-color .38s ease;" style-hover="transform:translateY(-4px);box-shadow:0 18px 40px rgba(40,50,70,0.12);border-color:#d7cfbf;">
+            <span style="font-size:13px;color:var(--accent);font-weight:600;">2015 · 2016</span>
+            <h3 style="margin:0;font-weight:700;font-size:20px;letter-spacing:-0.01em;">BAC S, Sciences de l'ingénieur</h3>
+            <p style="margin:0;font-size:15px;color:#6c675e;">Lycée Louis Payen</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="max-width:1120px; margin:0 auto; padding:20px 24px 90px;">
+    <div data-reveal style="opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.22,.61,.36,1),transform .75s cubic-bezier(.22,.61,.36,1); background:linear-gradient(160deg,#eaf2fc,#fbf3e3); border:1px solid rgba(255,255,255,0.9); border-radius:28px; padding:clamp(36px,5vw,64px); box-shadow:0 20px 60px rgba(40,50,70,0.12); display:flex; flex-direction:column; align-items:center; text-align:center; gap:26px;">
+      <span style="font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;">Contact</span>
+      <h2 style="font-weight:800;font-size:clamp(30px,4.4vw,52px);letter-spacing:-0.03em;line-height:1.05;margin:0;max-width:16ch;">Une mission, une idée, ou juste envie d'échanger ?</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center;">
+        <a href="mailto:talhahally974@gmail.com" style="display:inline-flex;align-items:center;gap:9px;padding:15px 26px;border-radius:15px;background:var(--yellow);color:#1b1a17;font-size:16px;font-weight:700;text-decoration:none;box-shadow:0 12px 28px rgba(248,206,75,0.5);transition:transform .28s ease,box-shadow .28s ease;" style-hover="transform:translateY(-3px);box-shadow:0 18px 36px rgba(248,206,75,0.62);">talhahally974@gmail.com</a>
+        <a href="tel:+33648986732" style="display:inline-flex;align-items:center;gap:9px;padding:15px 26px;border-radius:15px;background:#fff;border:1px solid var(--line);color:var(--ink);font-size:16px;font-weight:600;text-decoration:none;transition:transform .28s ease,border-color .28s ease;" style-hover="transform:translateY(-3px);border-color:#c9c0af;">06 48 98 67 32</a>
+        <a href="https://www.linkedin.com/in/talhah-ally-75b0b1175/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;padding:15px 26px;border-radius:15px;background:#fff;border:1px solid var(--line);color:var(--ink);font-size:16px;font-weight:600;text-decoration:none;transition:transform .28s ease,border-color .28s ease;" style-hover="transform:translateY(-3px);border-color:#c9c0af;">LinkedIn ↗</a>
+      </div>
+    </div>
+
+    <div style="margin-top:36px; padding-top:26px; border-top:1px solid var(--line); display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center; font-size:13px; color:var(--muted);">
+      <span style="display:flex;align-items:center;gap:9px;"><span style="width:26px;height:26px;border-radius:8px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:11px;">TA</span>Talhah Ally · Île-de-France</span>
+      <span>Portfolio 2026</span>
+    </div>
+  </section>
+
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:900},&quot;animateOnScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Style&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#1e6fa8&quot;,&quot;options&quot;:[&quot;#1e6fa8&quot;,&quot;#2f8f83&quot;,&quot;#c2703d&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Style&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = this.rootEl;
+    if (!root) return;
+    if (this.props.accent) root.style.setProperty('--accent', this.props.accent);
+    const els = Array.from(root.querySelectorAll('[data-reveal]'));
+    const reveal = (el) => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    if (this.props.animateOnScroll === false || !('IntersectionObserver' in window)) { els.forEach(reveal); return; }
+    this._io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { reveal(e.target); this._io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    els.forEach(el => this._io.observe(el));
+    this._t = setTimeout(() => els.forEach(reveal), 3000);
+  }
+  componentWillUnmount() { clearTimeout(this._t); if (this._io) this._io.disconnect(); }
+  renderVals() {
+    return { setRoot: (el) => { this.rootEl = el; } };
+  }
+}
+</script>
+</body>
+</html>
