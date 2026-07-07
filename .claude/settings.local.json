@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Item *)",
+      "PowerShell(Get-Command *)",
+      "PowerShell(npm *)",
+      "PowerShell(New-Item *)",
+      "PowerShell(node \"$env:TEMP\\\\img-convert\\\\convert.js\")"
+    ]
+  }
+}
