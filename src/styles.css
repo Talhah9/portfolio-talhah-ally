@@ -255,7 +255,7 @@ button { font: inherit; color: inherit; }
   overflow: hidden;
   padding-bottom: 0.08em;
 }
-.rotator > span { grid-area: 1 / 1; white-space: nowrap; }
+.rotator > span { grid-area: 1 / 1; }
 .gradient-text {
   background: var(--grad);
   -webkit-background-clip: text;
@@ -269,22 +269,6 @@ button { font: inherit; color: inherit; }
   font-size: clamp(17px, 1.6vw, 19px);
 }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
-.hero__stats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 56px;
-  padding-top: 26px;
-  border-top: 1px solid var(--line);
-}
-.hero__stats > div { display: flex; flex-direction: column; gap: 2px; }
-.stat__value {
-  font-family: var(--font-display);
-  font-size: clamp(26px, 3vw, 36px);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-}
-.stat__label { color: var(--faint); font-size: 14px; line-height: 1.35; }
 
 .hero__visual {
   position: relative;
@@ -785,8 +769,6 @@ button { font: inherit; color: inherit; }
   .section { padding: 88px 0; }
   .hero { padding-top: 112px; }
   .hero__title { font-size: clamp(38px, 11vw, 52px); }
-  .rotator > span { white-space: normal; }
-  .hero__stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 16px; }
   .hero__visual { height: 440px; }
   .hero__phone--front { width: 200px; left: 4%; }
   .hero__phone--back { width: 176px; }

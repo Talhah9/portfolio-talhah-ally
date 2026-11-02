@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion, useScroll, useSpring } from 'framer-motion'
-import { ArrowUpRight } from 'lucide-react'
-import { contact } from '../data.js'
+import { ArrowDown } from 'lucide-react'
 
 const links = [
   ['projets', 'Projets'],
@@ -67,8 +66,8 @@ export default function Nav() {
               </a>
             ))}
           </div>
-          <a className="btn btn--primary" href={`mailto:${contact.email}`}>
-            Me contacter <ArrowUpRight size={16} aria-hidden="true" />
+          <a className="btn btn--primary" href="#contact">
+            Me contacter <ArrowDown size={16} aria-hidden="true" />
           </a>
         </nav>
       </motion.header>

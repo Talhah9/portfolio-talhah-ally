@@ -9,8 +9,8 @@ import {
   useSpring,
   useTransform,
 } from 'framer-motion'
-import { ArrowDown, ArrowUpRight } from 'lucide-react'
-import { contact, heroWords, stats } from '../data.js'
+import { ArrowDown } from 'lucide-react'
+import { heroWords } from '../data.js'
 import { Magnetic, Phone, ease } from './motion.jsx'
 
 function RotatingWord() {
@@ -117,27 +117,10 @@ export default function Hero() {
             <Magnetic className="btn btn--primary btn--lg" href="#projets">
               Voir mes projets <ArrowDown size={18} aria-hidden="true" />
             </Magnetic>
-            <Magnetic className="btn btn--ghost btn--lg" href={`mailto:${contact.email}`}>
-              Parler de ton projet <ArrowUpRight size={18} aria-hidden="true" />
+            <Magnetic className="btn btn--ghost btn--lg" href="#contact">
+              Parler de ton projet <ArrowDown size={18} aria-hidden="true" />
             </Magnetic>
           </motion.div>
-
-          <motion.dl
-            className="hero__stats"
-            initial="hidden"
-            animate="show"
-            variants={{ hidden: {}, show: { transition: { staggerChildren: 0.08, delayChildren: 0.85 } } }}
-          >
-            {stats.map((s) => (
-              <motion.div
-                key={s.label}
-                variants={{ hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}
-              >
-                <dt className="stat__label" style={{ order: 2 }}>{s.label}</dt>
-                <dd className="stat__value" style={{ margin: 0 }}>{s.value}</dd>
-              </motion.div>
-            ))}
-          </motion.dl>
         </div>
 
         <div className="hero__visual" aria-hidden="true">

@@ -8,14 +8,7 @@ export const contact = {
   github: 'https://github.com/Talhah9',
 }
 
-export const heroWords = ['applications mobiles', 'SaaS', 'outils IA', 'sites web']
-
-export const stats = [
-  { value: '3', label: 'produits lancés' },
-  { value: '13', label: 'outils IA dans Savvly' },
-  { value: '240', label: 'questions dans Quiz Péi' },
-  { value: '150+', label: 'freelances accompagnés' },
-]
+export const heroWords = ['apps mobiles', 'SaaS', 'outils IA', 'sites web']
 
 export const stack = [
   'React', 'Next.js', 'React Native', 'Expo', 'TypeScript', 'Supabase', 'Stripe',
@@ -80,7 +73,7 @@ export const featured = [
     id: 'savvly',
     name: 'Savvly',
     kind: 'SaaS IA pour freelances',
-    year: '2024 – 2025',
+    year: 'Depuis 2024',
     status: 'En ligne',
     tagline: 'Le toolkit IA des freelances.',
     pitch:
