@@ -190,9 +190,37 @@ function ToolCloud({ project }) {
   )
 }
 
+// Capture d'un site dans une fenêtre de navigateur, avec un léger parallaxe.
+function BrowserShot({ project }) {
+  const ref = useRef(null)
+  const reduce = useReducedMotion()
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
+  const y = useTransform(scrollYProgress, [0, 1], reduce ? [0, 0] : [30, -30])
+
+  return (
+    <div className="case__media" ref={ref}>
+      <motion.div className="browser" style={{ y }} whileHover={{ rotate: -1, scale: 1.02 }}>
+        <div className="browser__bar">
+          <span className="tool-cloud__dots" aria-hidden="true"><i /><i /><i /></span>
+          <span className="browser__url">{project.site.url}</span>
+        </div>
+        <img
+          src={project.site.src}
+          alt={`Page d’accueil du site ${project.name}`}
+          width="1200"
+          height="750"
+          loading="lazy"
+          decoding="async"
+        />
+      </motion.div>
+    </div>
+  )
+}
+
 function CaseStudy({ project, flip }) {
   const media =
     project.id === 'noutpei' ? <ScreenSwitcher project={project} /> :
+    project.site ? <BrowserShot project={project} /> :
     project.screens ? <DuoPhones project={project} /> :
     <ToolCloud project={project} />
 

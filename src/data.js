@@ -91,6 +91,28 @@ export const featured = [
     ],
     tech: ['React', 'Vite', 'Tailwind', 'Supabase', 'Stripe', 'Resend', 'Claude API', 'OpenAI'],
   },
+  {
+    id: 'lecoinindien',
+    name: 'Le Coin Indien',
+    kind: 'Site vitrine · traiteur',
+    year: '2026',
+    status: 'En ligne',
+    tagline: 'Un traiteur familial, enfin visible en ligne.',
+    pitch:
+      'Le site d’un traiteur familial de Saint-Paul, à La Réunion : cuisine indienne, créole, chinoise et réunionnaise, 100 % halal et fait maison. Un site chaleureux qui donne faim et qui pousse à commander.',
+    accent: '#ea7a3b',
+    link: { href: 'https://le-coin-indien-786-site.vercel.app/', label: 'le site' },
+    site: { src: '/projects/lecoinindien-site.webp', url: 'le-coin-indien-786-site.vercel.app' },
+    features: [
+      ['Formules par personne', 'Trois formules prêtes à l’emploi, avec prix et contenu détaillés.'],
+      ['Box à emporter', 'Salé, sucré, burgers, mini pizzas : toutes les box avec leur prix.'],
+      ['Menu complet', 'Spécialités indiennes, cuisine créole, apéros et desserts, classés par onglets.'],
+      ['Galerie photo', 'Les plats et les commandes en grand, avec une visionneuse.'],
+      ['Commande directe', 'Appel en un clic et lien vers la page Facebook pour les devis.'],
+      ['Responsive & rapide', 'Pensé d’abord pour le mobile, léger et déployé sur Vercel.'],
+    ],
+    tech: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
+  },
 ]
 
 export const more = [
